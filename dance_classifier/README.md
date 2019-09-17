@@ -13,7 +13,7 @@ gunicorn -w 2 -k uvicorn.workers.UvicornWorker --log-level warning webserve:app
 
 Than open your browser and go to [localhost:8000](localhost:8000)
 
-## Data source
+## Data set
 The images to train the classifier have been extracted from teaching videos using ffmpeg
 by running something like
 
