@@ -18,7 +18,9 @@ The images to train the classifier have been extracted from teaching videos usin
 by running something like
 
 ```bash
-for i in *.mp4; do ffmpeg -i "$i" -vf scale=212:212,fps=1 "${i%.*}_foto%04d.jpg" ; done
+IFS=$'\n'; for i in $(find . -name '*.mp4' ); do ffmpeg -i "$i" -vf fps=1 "${i%.*}_foto%04d.jpg" ; done
 ```
+
+
 
 The extracted images are extracted at 1 fps and scaled to 212x212 pixels.
